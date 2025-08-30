@@ -4,7 +4,6 @@ public class Player_move : MonoBehaviour
 {
     Rigidbody2D rb;
     //코드 작성 해주세요!
-    [SerializeField] float speed;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -14,9 +13,5 @@ public class Player_move : MonoBehaviour
 
     {
         //코드 작성 해주세요!
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        rb.linearVelocity = new Vector2(x, y).normalized * speed;
     }
 }
